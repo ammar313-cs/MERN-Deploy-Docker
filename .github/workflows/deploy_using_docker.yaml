@@ -116,7 +116,7 @@ jobs:
           key: ${{ secrets.SSH_PEM }}
           port: 22
           script: |
-            sudo docker-compose up -d --network my-network
+            sudo docker-compose up -d 
 
       - name: Run Docker Compose
         uses: appleboy/ssh-action@v1.0.0
