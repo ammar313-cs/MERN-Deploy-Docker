@@ -12,7 +12,7 @@ RUN mkdir /react-app-repo-in
 
 WORKDIR /react-app-repo-in
 
-COPY ./react-app-repo ./react-app-repo-in
+COPY ./react_repo ./react-app-repo-in
 
 RUN npm install
 

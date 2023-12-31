@@ -22,22 +22,22 @@ jobs:
 
       - name: Install Dependencies
         run: |
-          cd my-react-repo
+          cd react_repo
           npm install
 
       - name: Build Project
         run: |
-          cd my-react-repo
+          cd react_repo
           npm run build-react
 
       - name: Test Project
         run: |
-          cd my-react-repo
+          cd react_repo
           npm run test-react
 
       - name: Lint Codebase
         run: |
-          cd my-react-repo
+          cd react_repo
           npx eslint src/sum.js src/cartview.js src/shippingOptions.js
 
       - name: Deploy and Copy to Staging Server
@@ -58,7 +58,7 @@ jobs:
           key: ${{ secrets.SSH_PEM }}
           port: 22
           script: |
-            cd my-react-repo
+            cd react_repo
             npm install
 
       - name: Deploy and Install Dependencies for Docker

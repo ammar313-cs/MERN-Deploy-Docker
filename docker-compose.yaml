@@ -9,7 +9,7 @@ services:
       - 3000:3000
     command: npx nodemon index.js
     volumes:
-      - ./my-react-repo:/react-app-repo-in
+      - ./react_repo/react-app-repo-in
     networks:
       - my-network
 
@@ -22,7 +22,7 @@ services:
       - 443:3000
     command: npm start
     volumes:
-      - ./my-react-repo:/react-app-repo-in
+      - ./react_repo:/react-app-repo-in
     networks:
       - my-network
 
