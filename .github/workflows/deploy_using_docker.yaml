@@ -28,7 +28,7 @@ jobs:
       - name: Build Project
         run: |
           cd react_repo
-          npm run build-react
+          npm run build
 
       - name: Test Project
         run: |
