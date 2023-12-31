@@ -49,6 +49,18 @@ jobs:
           remote_host: ${{ secrets.IP }}
           remote_user: ubuntu
           remote_key: ${{ secrets.SSH_PEM }}
+      
+      - name: Install Node on server
+        uses: appleboy/ssh-action@v1.0.0
+        with: 
+          host: ${{ secrets.IP }}
+          username: ubuntu
+          key: ${{ secrets.SSH_PEM }}
+          port: 22
+          script: |
+            curl -fsSL https://deb.nodesource.com/setup_16.x | sudo -E bash -
+            sudo apt-get install -y nodejs
+            
 
       - name: Install Node Modules on Server
         uses: appleboy/ssh-action@v1.0.0
