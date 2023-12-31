@@ -106,8 +106,7 @@ jobs:
       
       - name: Create Docker Network
         run: |
-          ssh ubuntu@${{ secrets.IP }} -i ${{ secrets.SSH_PEM }} -p 22 \
-          "docker network create my-network"
+         docker network create my-network
 
       - name: Run Docker Compose with Network
         uses: appleboy/ssh-action@v1.0.0
