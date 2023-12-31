@@ -14,7 +14,7 @@ WORKDIR /react-app-repo-in
 
 COPY ./react_repo ./react-app-repo-in
 
-RUN npm install
+RUN cd /react-app-repo-in && npm install
 
 EXPOSE 3000
 
